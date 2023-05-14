@@ -10,4 +10,20 @@
 int main(void)
 {
 	pid_t own_pid;
+	pid_t pid;
 
+	/*parent*/
+	printf("This is me before fork\n");
+
+	pid = fork();
+
+	if (own_pid == -1)
+	{
+		perror("fail\n");
+		return (1);
+	}
+	/*child*/
+	printf("This is me after fork\n");
+	own_pid = getpid();
+	return (0);
+}
