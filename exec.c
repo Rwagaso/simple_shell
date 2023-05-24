@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/wait.h>
-
+#include "shell.h"
 /**
  * main - Is A system call (execve) that permits
  * a program to execute another program

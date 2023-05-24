@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include "shell.h"
 /**
  * main - writing a function that has a unique process ID
  * Process Identifier (PID)

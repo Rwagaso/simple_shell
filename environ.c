@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _myenv - prints current environment
- * @info: Structure containing potential arguments. Used to maintain
+ * _myenv - this prints current environment
+ * @info: this has potential arguments.which is used to maintain
  * constant function of prototype.
- * Return: Always 0 succes
+ * Return: Always 0 succes..
  */
 int _myenv(info_t *info)
 {
@@ -13,11 +13,12 @@ int _myenv(info_t *info)
 }
 
 /**
- * _getenv - gets a value of the environ variable
- * @info: Structure containing potential arguments. Used to maintain
- * @name: env variable name
+ * _getenv - This gets a value of the environ variable
+ * @info: This has potential arguments.
  *
- * Return: the value
+ * @name: is the env variable name
+ *
+ * Return: must return the value
  */
 char *_getenv(info_t *info, const char *name)
 {
@@ -35,10 +36,11 @@ char *_getenv(info_t *info, const char *name)
 }
 
 /**
- * _mysetenv - Initialize the new environment variable,
- * or modify an existing one
- * @info: Structure containing potential arguments. Used to maintain
+ * _mysetenv - this ushers in the new environment variable,
+ * or modify an existing one.
+ * @info: this has potential arguments. Used to maintain
  * constant function prototype.
+ *
  *  Return: Always 0 successfully
  */
 int _mysetenv(info_t *info)
@@ -54,8 +56,8 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunsetenv - Remove an environment variable
- * @info: Structure containing potential arguments. Used to maintain
+ * _myunsetenv - do away with an environment variable
+ * @info: this has potential arguments. Used to maintain
  * constant function prototype.
  * Return: Always 0 successfully
  */
