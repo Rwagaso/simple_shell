@@ -1,5 +1,6 @@
-#define SHELL_H
 #ifndef SHELL_H
+#define SHELL_H
+
 
 #include <stdio.h>
 #include <unistd.h>
@@ -23,7 +24,7 @@ int main(int ac, char **av);
 #define CONVERT_UNSIGNED 2
 
 /* environ.c prototypes */
-char * _getenv(info_t *info, const char *name);
+char *_getenv(info_t *info, const char *name);
 int _mysetenv(info_t *info);
 int _mysetenv(info_t *info);
 int populate_env_list(info_t *info);
@@ -32,7 +33,7 @@ int _myenv(info_t *info);
 /* bultin.c prototype */
 int _myexit(info_t *info);
 int _mycd(info_t *info);
-int _myhelp(info_t *info)
+int _myhelp(info_t *info);
 
 /* getinfo.c prototypes */
 void free_info(info_t *info, int all);
@@ -73,7 +74,7 @@ read_history(info);
 hsh(info av);
 
 /* memory.c prototypes */
-int bfree(void **ptr)
+int bfree(void **ptr);
 
 /* errors.c protoypes*/
 void _eputs(char *str);

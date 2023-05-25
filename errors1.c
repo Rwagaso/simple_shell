@@ -13,9 +13,9 @@ int _erratoi(char *s)
 
 	if (*s == '+')
 		++;
-	for (c = 0 ;[c] != '\0'; c++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[c] >= '0'&& [c] <= '9')
+		if (s[c] >= '0' && s[c] <= '9')
 		{
 			result *= 10;
 			result += (s[c] - '0');
@@ -29,7 +29,7 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - prints an error message
+ * print_error - this prints an error message
  * @info: the parameter and return infotruct
  * @estr:tring containing specified error type
  * Return: 0 if no numbers intring, converted number otherwise
@@ -47,7 +47,7 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
+ * print_d - the function prints a decimal (integer) number (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
  *

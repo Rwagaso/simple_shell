@@ -2,7 +2,7 @@
 
 /**
  * _strlen - this returns the string length
- * @h: the string lenth to be checked
+ * @s: the string lenth to be checked
  *
  * Return: the integer length of te string
  */
@@ -87,4 +87,7 @@ char *_stract(char *dest, char *src)
 	*dest = *src;
 	return (rett);
 }
+
+
+
 
