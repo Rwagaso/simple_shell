@@ -82,14 +82,34 @@ int _putsfd(char *str, int fd);
 int _putfd(char c, int fd);
 
 /* error1.c prototypes */
+int _erratoi(char *s);
+void print_error(info_t *info, char *estr);
+int print_d(int input, int fd);
+char *convert_number(long int num, int base, int flags);
+void remove_comments(char *buf);
 
 /* string.c prototypes */
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *starts_with(constant char *haystack, constr char *needle);
+char *_stract(char *dest, char *src);
 
 /* getenv.c prototypes */
+char **get_environ(info_t *info);
+int _unsetenv(info_t *info, char *var);
+int _setenv(info_t *info, char *var, char *value);
 
 /* parser.c prototypes */
+int is_chmd(info_t *info, char *path);
+char *dup_chars(char *pathstr, int start, int stop);
+char *find_path(info_t *info, char *pathstr, char *chmd);
 
 /* getLne.c prototypes */
+ssize_t input_buf(info_t *info, char **buf, size_t *len);
+ssize_t get_input(info_t *info);
+ssize_t read_buf(info *info, char *buf, size_t *i);
+int _getline(info_t *info, char **ptr, size_t *length);
+void sigintHandler(__atribute__((unused))int sig_num);
 
 
 
