@@ -56,7 +56,7 @@ int_strcmp(char *s1, char *s2)
  * Return: the adress, or NULL.
  */
 
-char *starts_with(constant char *haystack, constr char *needle)
+char *starts_with(const char *haystack, constr char *needle)
 {
 	while (*needle)
 	{
