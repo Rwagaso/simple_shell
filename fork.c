@@ -24,6 +24,6 @@ int main(void)
 	}
 	/*child*/
 	printf("This is me after fork\n");
-	own_pid = getpid();
+	pid = getpid();
 	return (0);
 }
