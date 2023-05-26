@@ -71,7 +71,7 @@ int _myunsetenv(info_t *info)
 		return (1);
 	}
 	for (b = 1; b <= info->argc; b++)
-		_unsetenv(info, info->argv[i]);
+		_unsetenv(info, info->argv[b]);
 
 	return (0);
 }
@@ -88,7 +88,7 @@ int populate_env_list(info_t *info)
 	size_t b;
 
 	for (b = 0; environ[b]; b++)
-		add_node_end(&node, enviro[b], 0);
+		add_node_end(&node, environ[b], 0);
 	info->env = node;
 	return (0);
 }

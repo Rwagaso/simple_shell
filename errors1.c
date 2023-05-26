@@ -12,7 +12,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		++;
+		++
 	for (c = 0; s[c] != '\0'; c++)
 	{
 		if (s[c] >= '0' && s[c] <= '9')
@@ -104,10 +104,10 @@ tatic char buffer[50];
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
-ign = '-';
+        ign = '-';
 
 	}
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	arrays = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 
@@ -116,7 +116,7 @@ ign = '-';
 		n /= base;
 	} while (n != 0);
 
-	if (sign)
+	if 'sign'
 		*--ptr = sign;
 	return (ptr);
 }
