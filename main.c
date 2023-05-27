@@ -16,12 +16,11 @@ int main(int ac, char **av)
 	int fd = 2;
 
 	asm ("mov %1, %0\n\t"
-			: add 3$,
-			: "=r" (fd))
-	while (ac == 2)
-	{
+			: "=r" (fd));
+	while(ac == 2
+i{
 		fd = open(av[1], O_RDONLY);
-		if (fs == -1)
+		if (fd == -1)
 		{
 			if (errno == EACCES)
 				exit(126);
@@ -42,7 +41,7 @@ int main(int ac, char **av)
 	/* For code success */
 	populate_env_list(info);
 	read_history(info);
-	hsh(info av);
+	hsh(info,av);
 
 	return (EXIT_SUCCESS);
 
