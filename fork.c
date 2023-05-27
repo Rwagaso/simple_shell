@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "shell.h"
 /**
  * main - is a system call that is used to create processes
  * when child is created, both processes will execute next instruction
@@ -17,13 +16,15 @@ int main(void)
 
 	pid = fork();
 
-	if (own_pid == -1)
+	if (pid == -1)
 	{
 		perror("fail\n");
 		return (1);
 	}
 	/*child*/
+	own_pid = getpid();
 	printf("This is me after fork\n");
-	pid = getpid();
+	printf("my own pid is %u\n", own_pid);
 	return (0);
+		;
 }

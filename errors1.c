@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _erratoi - convertstring to an integer
+ * _erratoi - this is convertstring to an integer
  * @s: thetring to be converted
  * Return: 0 if no numbers intring, converted number otherwise
  *       -1 on error
@@ -12,7 +12,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		++
+		s++;
 	for (c = 0; s[c] != '\0'; c++)
 	{
 		if (s[c] >= '0' && s[c] <= '9')
@@ -86,18 +86,18 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa
- * @num: number
+ * convert_number - is the converter function, a clone of itoa
+ * @num: this is the number
  * @base: base
- * @flags: argument flags
+ * @flags: this is argument flags
  *
  * Return:tring
  */
 char *convert_number(long int num, int base, int flags)
 {
-tatic char *array;
-tatic char buffer[50];
-	charign = 0;
+static char *array;
+static char buffer[50];
+	char ign = 0;
 	char *ptr;
 	unsigned long n = num;
 
@@ -107,7 +107,7 @@ tatic char buffer[50];
         ign = '-';
 
 	}
-	arrays = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 
@@ -116,8 +116,8 @@ tatic char buffer[50];
 		n /= base;
 	} while (n != 0);
 
-	if 'sign'
-		*--ptr = sign;
+	if (ign)
+		*--ptr = ign;
 	return (ptr);
 }
 

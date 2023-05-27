@@ -2,11 +2,11 @@
 
 /**
  * input_buf - buffers chained commands
- * @info: parameter struct
+ * @info: is the  parameter struct
  * @buf: address of buffer
  * @len: address of len var
  *
- * Return: bytes read
+ * Return: the bytes read
  */
 ssize_t input_buf(info_t *info, char **buf, size_t *len)
 {
@@ -45,10 +45,10 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - gets a line minus the newline
- * @info: parameter struct
+ * get_input - this gets a line minus the newline
+ * @info: is the parameter struct
  *
- * Return: bytes read
+ * Return: the bytes read
  */
 ssize_t get_input(info_t *info)
 {
@@ -81,7 +81,7 @@ ssize_t get_input(info_t *info)
 			info->cmd_buf_type = CMD_NORM;
 		}
 
-		*buf_p = p; /* pass back pointer to current command position */
+		*buf_p = p; /* pass pointer to current command position */
 		return (_strlen(p)); /* return length of current command */
 	}
 
@@ -90,10 +90,10 @@ ssize_t get_input(info_t *info)
 }
 
 /**
- * read_buf - reads a buffer
- * @info: parameter struct
- * @buf: buffer
- * @i: size
+ * read_buf - this reads a buffer
+ * @info: the parameter struct
+ * @buf: refers to buffer
+ * @i: is the size
  *
  * Return: r
  */
@@ -101,16 +101,16 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 {
 	ssize_t a = 0;
 
-	if (*b)
+	if (*i)
 		return (0);
 	a = read(info->readfd, buf, READ_BUF_SIZE);
 	if (a >= 0)
-		*b = a;
+		*i = a;
 	return (a);
 }
 
 /**
- * _getline - gets the next line of input from STDIN
+ * _getline - this gets the next line of input from STDIN
  * @info: parameter struct
  * @ptr: address of pointer to buffer, preallocated or NULL
  * @length: size of preallocated ptr buffer if not NULL
@@ -168,4 +168,5 @@ void sigintHandler(__attribute__((unused))int sig_num)
 	_puts("$ ");
 	_putchar(BUF_FLUSH);
 }
+
 
