@@ -1,8 +1,8 @@
 #include "shell.h"
-
+#include <errno.h>
 /**
  * main - This refers to the function to the enty point
- *
+ * @O_RDONLY - read only
  * @av: This refers to the vector of the arg
  * @ac: This refers to the count of the arg
  *
@@ -16,7 +16,7 @@ int main(int ac, char **av)
 	int fd = 2;
 
 	asm ("mov %1, %0\n\t"
-			: add $3,
+			: add 3$,
 			: "=r" (fd))
 	while (ac == 2)
 	{
@@ -29,7 +29,7 @@ int main(int ac, char **av)
 			{
 				_eputs(av[0]);
 				_eputs(av[1]);
-				_eputs(": 0: Not able to open ")
+				_eputs(": 0: Not able to open ");
 				_eputchar('\n');
 				_eputchar(BUF_FLUSH);
 				exit(127);
