@@ -29,7 +29,7 @@ int _strlen(char *s)
  * otherwise (+) if s1>s2.
  * 0 if s1==s2.
  */
-int_strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	while (*s1 && *s2)
 	{
@@ -56,7 +56,7 @@ int_strcmp(char *s1, char *s2)
  * Return: the adress, or NULL.
  */
 
-char *starts_with(const char *haystack, constr char *needle)
+char *starts_with(const char *haystack, const char *needle)
 {
 	while (*needle)
 	{
